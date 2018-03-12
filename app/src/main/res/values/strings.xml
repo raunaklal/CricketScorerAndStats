@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Cricket Scorer And Stats</string>
+    <string name="add_new_group">Add New Group</string>
+    <string name="delete_group">Delete Group</string>
+    <string name="help">Help</string>
 </resources>

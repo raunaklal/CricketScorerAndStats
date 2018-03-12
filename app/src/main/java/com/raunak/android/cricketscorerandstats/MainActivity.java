@@ -32,14 +32,16 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id=item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if(id==R.id.action_favorite){
-            Toast.makeText(MainActivity.this, "Action Clicked", Toast.LENGTH_LONG).show();
-            return true;
+        switch (id){
+            case R.id.add_new_group:
+                Toast.makeText(MainActivity.this,R.string.add_new_group, Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.delete_group:
+                Toast.makeText(MainActivity.this,R.string.delete_group, Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }
 
