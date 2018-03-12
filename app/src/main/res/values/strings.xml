@@ -3,4 +3,5 @@
     <string name="add_new_group">Add New Group</string>
     <string name="delete_group">Delete Group</string>
     <string name="help">Help</string>
+    <string name="home1">Select Group to Start:</string>
 </resources>

@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.delete_group:
                 Toast.makeText(MainActivity.this,R.string.delete_group, Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.help:
+                Toast.makeText(MainActivity.this, R.string.help, Toast.LENGTH_SHORT).show();
             default:
                 return super.onOptionsItemSelected(item);
         }
