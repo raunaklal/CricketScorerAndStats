@@ -5,11 +5,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar mTopToolbar;
+    String[] nameArray={"Kalindi Warriors"};
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mTopToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(mTopToolbar);
+
+        CustomAdapter whatever=new CustomAdapter(this,nameArray);
+
+        listView=findViewById(R.id.list_view);
+        listView.setAdapter(whatever);
     }
 
     @Override
