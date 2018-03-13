@@ -8,10 +8,12 @@ import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar mTopToolbar;
-    String[] nameArray={"Kalindi Warriors"};
+    ArrayList<String>  nameArray=new ArrayList<>();
     ListView listView;
 
     @Override
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         CustomAdapter whatever=new CustomAdapter(this,nameArray);
 
+        nameArray.add("Kalindi Warriors");
         listView=findViewById(R.id.list_view);
         listView.setAdapter(whatever);
     }
@@ -44,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.add_new_group:
                 Toast.makeText(MainActivity.this,R.string.add_new_group, Toast.LENGTH_SHORT).show();
                 return true;
-            case R.id.delete_group:
-                Toast.makeText(MainActivity.this,R.string.delete_group, Toast.LENGTH_SHORT).show();
-                return true;
+            //case R.id.delete_group:
+             //   Toast.makeText(MainActivity.this,R.string.delete_group, Toast.LENGTH_SHORT).show();
+               // return true;
             case R.id.help:
                 Toast.makeText(MainActivity.this, R.string.help, Toast.LENGTH_SHORT).show();
             default:

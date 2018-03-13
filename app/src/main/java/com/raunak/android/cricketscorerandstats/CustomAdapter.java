@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * Created by raunak on 13-03-2018.
  */
@@ -17,9 +19,9 @@ public class CustomAdapter extends ArrayAdapter{
 
     private final Activity context;
 
-    private final String[] groupNameArray;
+    private final ArrayList<String> groupNameArray;
 
-    public CustomAdapter(Activity context, String[] groupNameArray) {
+    public CustomAdapter(Activity context, ArrayList<String> groupNameArray) {
         super(context, R.layout.group_row ,groupNameArray);
         this.context = context;
         this.groupNameArray = groupNameArray;
@@ -33,7 +35,7 @@ public class CustomAdapter extends ArrayAdapter{
         TextView groupNameField = rowView.findViewById(R.id.textView);
 
         //this code sets the values of the objects to values from the arrays
-        groupNameField.setText(groupNameArray[position]);
+        groupNameField.setText(groupNameArray.get(position));
         return rowView;
 
     };
