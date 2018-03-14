@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Open"
-        android:textSize="12dp"/>
+        android:textSize="12sp"/>
 
     <Button
         android:id="@+id/delete"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/delete_group"
-        android:textSize="12dp"/>
+        android:textSize="12sp"/>
 
     <Button
         android:id="@+id/share"
@@ -38,6 +38,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Share"
-        android:textSize="12dp"/>
+        android:textSize="12sp"/>
 
 </LinearLayout>
